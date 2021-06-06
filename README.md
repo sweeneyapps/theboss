@@ -1,2 +1,2 @@
 # theboss
-For Fun
+A meme website for https://twitter.com/traversymedia
