@@ -12,11 +12,29 @@
     height: 430px;
     background-image: url("theboss.jpg");
   }
-  .boss:focus, .boss:active, .boss:hover {
+  .boss:hover {
     background-position-y: 435px;
   }
 </style>
 <body>
-  <div class="boss" role="button">&nbsp;</div>
+  <div class="boss">&nbsp;</div>
+
+  <script>
+    function handleTouchStart(e) {
+      e.target.style.backgroundPositionY = "435px";
+    }
+
+    function handleTouchEnd(e) {
+      e.target.style.backgroundPositionY = "0px";
+    }
+
+    function init() {
+      var brad = document.querySelector(".boss");
+      brad.addEventListener("touchstart", handleTouchStart, false);
+      brad.addEventListener("touchend", handleTouchEnd, false);
+    }
+
+    document.addEventListener("DOMContentLoaded", init);
+  </script>
 </body>
 </html>
