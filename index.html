@@ -1,40 +1,93 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Boss</title>
-</head>
-<style>
-  .boss {
-    width: 518px;
-    height: 430px;
-    background-image: url("theboss.jpg");
-  }
-  .boss:hover {
-    background-position-y: 435px;
-  }
-</style>
-<body>
-  <div class="boss">&nbsp;</div>
+<html lang="eng">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css">
+    <title>The Boss</title>
+  </head>
+  <style>
+    *{
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+    .body{
+      background-color: dimgray;
+    }
+    .boss {
+      width: 518px;
+      height: 430px;
+      background-image: url("./theboss.jpg");
+      margin: auto;
+      margin-top: 100px;
+      border: 3px solid black;
+      box-shadow: 10px;
+      border-radius: 10px;
+    }
+    .boss:hover {
+      background-position-y: 435px;
+    }
+    .head1{
+      text-align: center;
+      background-color: aqua;
+    }
+    .span1{
+      text-align: center;
+    }
+    .b1{
+      font-size: 20px;
+      font-weight: bold;
+      height: 50px;
 
-  <script>
-    function handleTouchStart(e) {
-      e.target.style.backgroundPositionY = "435px";
     }
 
-    function handleTouchEnd(e) {
-      e.target.style.backgroundPositionY = "0px";
+    @media only screen and (max-width:992px){
+      .boss{
+        width: 100%;
+        object-fit: cover;
+        border-radius: 50%;
+  
+      }
+      .head1{
+        font-size: 12px;
+        background-color: rgb(7, 7, 49);
+        color: white;
+      
+      }
+      
     }
 
-    function init() {
-      var brad = document.querySelector(".boss");
-      brad.addEventListener("touchstart", handleTouchStart, false);
-      brad.addEventListener("touchend", handleTouchEnd, false);
-    }
+  </style>
+    <header>
+      <div class="head1">
+        <h1>BRAD THE BOSS MEME PAGE</h1>
+      </div>
+    </header>
+  <hr></hr>
+  <body>
+    <div class="boss">&nbsp;</div>
+    <br>
+    <div class="span1"><button class="b1">Tap image to see me smile👨</button></div>
+    <script>
+      function handleTouchStart(e) {
+        e.target.style.backgroundPositionY = "435px";
+      }
 
-    document.addEventListener("DOMContentLoaded", init);
-  </script>
-</body>
+      function handleTouchEnd(e) {
+        e.target.style.backgroundPositionY = "0px";
+      }
+
+      function init() {
+        var brad = document.querySelector(".boss");
+        brad.addEventListener("touchstart", handleTouchStart, false);
+        brad.addEventListener("touchend", handleTouchEnd, false);
+      }
+
+      document.addEventListener("DOMContentLoaded", init);
+    </script>
+
+  </body>
+  
 </html>
