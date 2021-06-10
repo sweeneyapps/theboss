@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="style.css">
     <title>The Boss</title>
   </head>
   <style>
@@ -28,15 +27,23 @@
     }
     .head1{
       text-align: center;
-      background-color: aqua;
+      background-color:aqua;
+      border: 1px solid black;
+      font-weight:200 ;
+      font-size: 20px;
+      padding: 10px;
+
     }
     .span1{
       text-align: center;
-    }
-    .b1{
-      font-size: 20px;
-      font-weight: bold;
-      height: 50px;
+      margin: auto;
+      background-color: #ccc;
+      border: 2px solid black;
+      width: 30%;
+      padding: 15px;
+      font-size: 24px;
+      font-weight: 600;
+      border-radius: 20px;
     }
 
     @media only screen and (max-width:992px){
@@ -44,28 +51,30 @@
         width: 100%;
         object-fit: cover;
         border-radius: 50%;
-  
       }
       .head1{
         font-size: 12px;
         background-color: rgb(7, 7, 49);
         color: white;
-      
       }
       
     }
 
   </style>
+
+  <body>
     <header>
       <div class="head1">
-        <h1>BRAD THE BOSS MEME PAGE</h1>
+        <h2><i>Hi there 👋 welcome to - </i> BRAD THE BOSS MEME PAGE</h2>
       </div>
     </header>
-  <hr></hr>
-  <body>
+
+   <hr></hr>
+
     <div class="boss">&nbsp;</div>
     <br>
-    <div class="span1"><button class="b1">Tap image to see me smile👨</button></div>
+    <div class="span1">Tap image to see me smile👨</div>
+
     <script>
       function handleTouchStart(e) {
         e.target.style.backgroundPositionY = "435px";
